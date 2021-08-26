@@ -2,13 +2,13 @@
 <package >
   <metadata>
     <id>Enlow.Controls</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>Enlow.Controls</title>
     <authors>Neale Lonslow</authors>
     <owners>Neale Lonslow</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/nelons/uwpcontrols</projectUrl>
+    <projectUrl>https://github.com/nelons/enlowcontrols</projectUrl>
     <description>Neale's native UWP Controls</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2021</copyright>
