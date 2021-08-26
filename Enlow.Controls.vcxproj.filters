@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>80b9430a-7cea-4c39-a8ba-4e293a8e3173</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="SimpleDataGrid.cpp" />
+    <ClCompile Include="SimpleDataGridColumn.cpp" />
+    <ClCompile Include="SimpleDataGridCell.cpp" />
+    <ClCompile Include="SimpleDataGridRow.cpp" />
+    <ClCompile Include="SimpleDataGridColumnCollection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="SimpleDataGrid.h" />
+    <ClInclude Include="SimpleDataGridColumn.h" />
+    <ClInclude Include="SimpleDataGridCell.h" />
+    <ClInclude Include="SimpleDataGridRow.h" />
+    <ClInclude Include="SimpleDataGridRowSortHandler.h" />
+    <ClInclude Include="SimpleDataGridColumnCollection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="todo.txt" />
+  </ItemGroup>
+</Project>

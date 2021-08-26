@@ -1,0 +1,32 @@
+Control Properties
+x EvenRowBackground
+x OddRowBackground
+x RowOpacity
+x ShowRowNumbers
+- Row Number Column Title Resource Key
+- Row Number Column Title Text
+
+ColumnBackground
+- DataMargin
+- DataPadding
+- ColumnSaveWidthKey
+- ColumnSaveLocation (Local|Roaming)
+x ResourceKey for Column Title
+- Column Title Alignment (HorizontalAlignment/VerticalAlignment)
+- Column Title Background
+x Can Show/Hide Column
+
+Things to investigate
+x Sorting (in control)
+x showing + hiding column
+x clicking on header column (to sort + select show/hide column)
+- Row Selection (event onselection)
+- scroll bars
+- measure size of column header and set size of column
+x right click for sort ascending/descending will check box if one is currently being sorted that way.
+- options to highlight row
+- brush to highlight row with
+- good colour scheme for rows+highlight.
+
+- hightlight doesn't seem to work on alternate rows.
+- divider colour

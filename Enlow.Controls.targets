@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <EnlowControls-Platform Condition="'$(Platform)' == 'Win32'">x86</EnlowControls-Platform>
+        <EnlowControls-Platform Condition="'$(Platform)' != 'Win32'">$(Platform)</EnlowControls-Platform>
+    </PropertyGroup>
+    <ItemGroup Condition="'$(TargetPlatformIdentifier)' == 'UAP'">
+        <Reference Include="$(MSBuildThisFileDirectory)..\..\lib\uap10.0\Enlow.Controls.winmd">
+            <Implementation>Enlow.Controls.dll</Implementation>
+        </Reference>
+      <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)..\..\runtimes\win10-$(EnlowControls-Platform)\native\Enlow.Controls.dll" />
+    </ItemGroup>
+
+  <Target Name="CopyContent" BeforeTargets="AssignTargetPaths">
+    <ItemGroup>
+      <AppxPackagePayload Include="$(MSBuildThisFileDirectory)..\..\runtimes\win10-$(EnlowControls-Platform)\native\Enlow.Controls\Themes\Generic.xbf">
+        <TargetPath>Enlow.Controls\Themes\Generic.xbf</TargetPath>
+      </AppxPackagePayload>
+    </ItemGroup>
+  </Target>
+</Project>

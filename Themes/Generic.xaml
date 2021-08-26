@@ -1,0 +1,176 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Enlow.Controls">
+
+    <!--
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx://Enlow.Controls/SimpleDataGrid.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    -->
+
+    <Style TargetType="local:SimpleDataGrid">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SimpleDataGrid">
+                    <Grid
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid x:Name="gridColumnHeaders" Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                        </Grid>
+
+                        <Border
+                            x:Name="divider"
+                            Grid.Row="0"
+                            BorderBrush="{StaticResource SystemAccentColorLight3}"
+                            BorderThickness="0,0,0,1" />
+
+                        <Grid x:Name="gridRows" Grid.Row="1" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="local:SimpleDataGridColumn">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SimpleDataGridColumn">
+                    <Grid
+                        x:Name="gridRoot"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="5" />
+                        </Grid.ColumnDefinitions>
+
+                        <ContentPresenter
+                            Padding="5"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="{TemplateBinding VerticalAlignment}"
+                            Content="{TemplateBinding Content}" />
+
+                        <FontIcon
+                            x:Name="SortIcon"
+                            Grid.Column="1"
+                            Margin="0,0,5,0"
+                            FontFamily="Segoe MDL2 Assets"
+                            FontSize="14"
+                            Glyph="&#xE70E;"
+                            Opacity="0" />
+
+                        <Rectangle
+                            x:Name="content"
+                            Grid.Column="2"
+                            Margin="0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Fill="Transparent" />
+
+                        <Border
+                            x:Name="divider"
+                            Grid.Column="2"
+                            BorderBrush="{StaticResource SystemAccentColorLight3}"
+                            BorderThickness="0,0,1,0" />
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="SortStates">
+                                <VisualState x:Name="Unsorted" />
+                                <VisualState x:Name="SortAscending">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="SortIcon"
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="1"
+                                            Duration="0" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="SortDescending">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="SortIcon"
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="1"
+                                            Duration="0" />
+                                    </Storyboard>
+                                    <VisualState.Setters>
+                                        <Setter Target="SortIcon.Glyph" Value="&#xE70D;" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--  root grid background was set  -->
+    <Style TargetType="local:SimpleDataGridCell">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:SimpleDataGridCell">
+                    <Grid x:Name="gridRoot" HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="5" />
+                        </Grid.ColumnDefinitions>
+
+                        <Rectangle
+                            x:Name="background"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Fill="{TemplateBinding Background}" />
+
+                        <Border
+                            x:Name="divider"
+                            Grid.Column="2"
+                            BorderBrush="{StaticResource SystemAccentColorLight3}"
+                            BorderThickness="0,0,1,0" />
+
+                        <ContentPresenter
+                            x:Name="content"
+                            Padding="10,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+
+                        <!--
+                        <Rectangle
+                            x:Name="divider"
+                            Grid.Column="1"
+                            Width="4"
+                            Margin="0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Stretch">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush StartPoint="0 0" EndPoint="1 0">
+                                    <GradientStop Offset="0.0" Color="Transparent" />
+                                    <GradientStop x:Name="dividercolour" Offset="1.0" Color="Blue" />
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        -->
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

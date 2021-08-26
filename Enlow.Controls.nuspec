@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Enlow.Controls</id>
+    <version>1.0.3</version>
+    <title>Enlow.Controls</title>
+    <authors>Neale Lonslow</authors>
+    <owners>Neale Lonslow</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/nelons/uwpcontrols</projectUrl>
+    <description>Neale's native UWP Controls</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>uwp native datagrid</tags>
+    
+    <dependencies>
+      <group targetFramework="UAP10.0" />
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="Debug\Enlow.Controls\Enlow.Controls.winmd" target="lib\uap10.0" />
+    <file src="Debug\Enlow.Controls\Enlow.Controls.xml" target="lib\uap10.0" />
+    <file src="Themes\Generic.xaml" target="lib\uap10.0\Themes" />
+
+    <file src="Debug\Enlow.Controls\Enlow.Controls.pdb" target="ref\uap10.0" />
+
+    <file src="ARM\Debug\Enlow.Controls\Enlow.Controls.dll" target="runtimes\win10-arm\native" />
+    <file src="ARM\Debug\Enlow.Controls\Enlow.Controls.pri" target="runtimes\win10-arm\native" />
+
+    <file src="ARM64\Debug\Enlow.Controls\Enlow.Controls.dll" target="runtimes\win10-arm64\native" />
+    <file src="ARM64\Debug\Enlow.Controls\Enlow.Controls.pri" target="runtimes\win10-arm64\native" />
+
+    <file src="x64\Debug\Enlow.Controls\Enlow.Controls.dll" target="runtimes\win10-x64\native" />
+    <file src="x64\Debug\Enlow.Controls\Enlow.Controls.pri" target="runtimes\win10-x64\native" />
+    
+    <file src="Debug\Enlow.Controls\Enlow.Controls.dll" target="runtimes\win10-x86\native" />
+    <file src="Debug\Enlow.Controls\Enlow.Controls.pri" target="runtimes\win10-x86\native" />
+
+    <file src="Enlow.Controls.targets" target="build\native" />
+
+    <!-- Generic -->
+    <file src="Debug\Enlow.Controls\Enlow.Controls\Themes\Generic.xbf" target="runtimes\win10-x86\native\Enlow.Controls\Themes" />
+    <file src="x64\Debug\Enlow.Controls\Enlow.Controls\Themes\Generic.xbf" target="runtimes\win10-x64\native\Enlow.Controls\Themes" />
+    <file src="ARM\Debug\Enlow.Controls\Enlow.Controls\Themes\Generic.xbf" target="runtimes\win10-arm\native\Enlow.Controls\Themes" />
+    <file src="ARM64\Debug\Enlow.Controls\Enlow.Controls\Themes\Generic.xbf" target="runtimes\win10-arm64\native\Enlow.Controls\Themes" />
+
+  </files>
+</package>
