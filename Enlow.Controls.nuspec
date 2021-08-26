@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Enlow.Controls</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <title>Enlow.Controls</title>
     <authors>Neale Lonslow</authors>
     <owners>Neale Lonslow</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/nelons/enlowcontrols</projectUrl>
-    <description>Neale's native UWP Controls</description>
+    <description>DataGrid native UWP control</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2021</copyright>
     <tags>uwp native datagrid</tags>

@@ -10,7 +10,7 @@ The library currently contains the following controls.
 
 This is a DataGrid control that will work with native applications. There is a DataGrid control as part of the Windows Community Toolkit but this only works for .NET applications. The control requires columns to be defined (either in XAML or via bindings), and supports column resizing, sorting and single/multiple selection.
 
-This library can be built from the source here, or imported from nuget when available.
+This library can be built from the source here, or imported from nuget when available at https://www.nuget.org/packages/Enlow.Controls.
 
 Examples:
 
